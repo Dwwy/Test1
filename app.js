@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 // app.use(log.LogResponse);
 app.get("/down", (req, res) => {
+  res.send("Service is down");
   process.exit(1);
-  res.send(test);
 });
 app.get("*", (req, res) => {
   res.send("Hello, World!");
